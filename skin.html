@@ -1,0 +1,1234 @@
+<!--
+skin name : fast itcider (en version)
+version : v3.1
+author : itcider.com
+website : itcider.com
+license : itcider license
+warning :
+Comments cannot be edited or deleted
+fi skin phrase cannot be deleted
+An unlimited number of skins can be applied to the site
+Redistribution or unauthorized use of code is strictly prohibited
+Distributable only on the itcider official website
+If you do not follow the above precautions, you will not be able to use it.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>[##_page_title_##]</title>
+  <meta name="title" content="[##_page_title_##] : [##_title_##]" />
+  <meta name="description" Content="[##_desc_##]" />
+  <meta name="keywords" content="[##_var_metakeyword_##]" />
+  <meta name="title" content="[##_page_title_##] : [##_title_##]" />
+  <meta name="description" Content="[##_desc_##]" />
+  <meta name="author" content="[##_var_metaauthor_##]" />
+  <meta charset="utf-8" />
+  <s_if_var_metaportal>
+  [##_var_navermeta_##]
+  [##_var_googlemeta_##]
+  </s_if_var_metaportal>
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+  <link rel="stylesheet" href="/favicon.ico">
+
+  <s_if_var_manualupdate>                                            
+  <link rel="stylesheet" href="./style.css" />                                              
+  <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>     
+  </s_if_var_manualupdate>                                            
+
+  <s_if_var_autoupdate>                                            
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev3-1.css" />                                              
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/jquery.min.js"></script>   
+  </s_if_var_autoupdate>                                            
+
+</head>
+
+<s_if_var_itcidercovernotgrad>
+  <style>                    
+  .type_article_header_cover .inner_header {
+    height: 520px; }
+    </style>
+  </s_if_var_itcidercovernotgrad>
+  <s_if_var_itcidercovergrad>
+    <style>              
+    .type_article_header_cover .inner_header {
+      height: 300px; 
+      background: linear-gradient(to bottom right, rgb(255, 123, 0),rgb(12, 58, 211));
+    }
+      </style>
+    </s_if_var_itcidercovergrad>
+  
+<!-- css and js load -->
+
+
+
+
+
+
+<!-- css and js load finished-->
+
+<body id="[##_body_id_##]" class="[##_var_colorSet_##]">
+  <s_t3>
+    <div id="wrap">
+
+      [##_revenue_list_upper_##]
+      <header class="box_header">
+        <h2 class="title_logo">
+          <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
+            <s_if_var_logoImage>
+              <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+            </s_if_var_logoImage>
+            <s_not_var_logoImage>
+              [##_title_##]
+            </s_not_var_logoImage>
+          </a>
+        </h2>
+
+        <button class="btn_search"></button>
+        <button type="button" class="btn_menu" title="menu"><span class="blind">menu</span></button>
+      </header>
+
+      <div id="container">
+        <aside class="area_sidebar thema_apply" style="display: none;">
+
+          <div class="inner_sidebar">
+            <div class="sidebar_header">
+              <h2 class="title_logo">
+                <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
+                  <s_if_var_logoImage>
+                    <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+                  </s_if_var_logoImage>
+                  <s_not_var_logoImage>
+                    [##_title_##]
+                  </s_not_var_logoImage>
+                </a>
+              </h2>
+              <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
+            </div>
+
+            <div class="sidebar_contents">
+              <div class="sidebar_menu">
+                <s_sidebar>
+                  <s_sidebar_element>
+                    <div class="sidebar_left">
+                      <s_if_var_tistorycategory>
+                      <div class="box_gnb">
+                        <nav>
+                          [##_category_list_##]
+                        </nav>
+                      </div>
+                    </s_if_var_tistorycategory>
+
+                  </s_sidebar_element>
+                  <s_sidebar_element>
+                    <s_if_var_tistorymenu>
+
+                    <div class="box_gnb">
+                      [##_blog_menu_##]
+                    </div>
+                  </s_if_var_tistorymenu>
+
+              </div>
+              </s_sidebar_element>
+              <s_sidebar_element>
+                <div class="sidebar_right">
+                  <div class="box_sns">
+                    <ul class="list_sns">
+                      <s_link_rep>
+                        <li>
+                          <a href="[##_link_url_##]" class="link_add" target="_blank" data-site="[##_link_site_##]">[##_link_site_##]</a>
+                        </li>
+                      </s_link_rep>
+                    </ul>
+                  </div>
+              </s_sidebar_element>
+
+              <s_sidebar_element>
+                <s_if_var_tistoryrss>
+                <div class="add_link">
+                  <a href="[##_rss_url_##]" target="_blank" class="link_add">RSS feed</a>
+                </div>
+              </s_if_var_tistoryrss>
+            </div>
+            </s_sidebar_element>
+            </s_sidebar>
+          </div>
+
+          <div class="box_tool">
+            <s_if_var_tistoryadmin>
+            <div class="btn-for-guest">
+              <a href="#" class="link_tool" data-action="login">login</a>
+            </div>
+            <div class="btn-for-user">
+              <a href="#" class="link_tool" data-action="logout">logout</a>
+              <a href="[##_owner_url_##]/entry/post" class="link_tool">write</a>
+              <a href="[##_owner_url_##]" class="link_tool">manage</a>
+            </div>
+          </s_if_var_tistoryadmin>
+          <!-- itcider tistory free skin fiskin! do not delete it-->
+          <a href="https://itcider.com/903">fiskin by itcider.com</a>
+          <!-- itcider tistory free skin fiskin! do not delete it-->
+          </div>
+      </div>
+    </div>
+
+    <div class="dimmed_sidebar"></div>
+    </aside>
+    <div class="area_popup" style="display: none;">
+      <div class="area_search thema_apply">
+        <div class="search_header">
+          <h2 class="title_logo">
+            <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
+              <s_if_var_logoImage>
+                <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+              </s_if_var_logoImage>
+              <s_not_var_logoImage>
+                [##_title_##]
+              </s_not_var_logoImage>
+            </a>
+          </h2>
+          <button type="button" class="btn_close" title="close"><span class="icon-Close"></span></button>
+        </div>
+
+        <div class="search_content">
+          <form action="" method="get">
+            <legend><span class="blind">content search</span></legend>
+            <div class="box_form">
+              <span class="icon-Search"></span>
+              <s_search>
+                <input type="text" name="[##_search_name_##]" title="insert keyword" placeholder="[##_var_searchkeyword_##]" value="" class="inp_search"
+                  onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }">
+              </s_search>
+              <button type="button" title="delete keyword" class="btn_search_del">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 36 36" class="img_svg">
+                  <defs>
+                    <path id="textDelBtnSvg" d="M20 2C10.059 2 2 10.059 2 20s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2zm8 24.6L26.6 28 20 21.4 13.4 28 12 26.6l6.6-6.6-6.6-6.6 1.4-1.4 6.6 6.6 6.6-6.6 1.4 1.4-6.6 6.6 6.6 6.6z" />
+                  </defs>
+                  <g fill="none" fill-rule="evenodd" transform="translate(-2 -2)">
+                    <path d="M0 0h40v40H0z" />
+                    <mask id="textDelBtnSvgMask" fill="#fff">
+                      <use xlink:href="#textDelBtnSvg" />
+                    </mask>
+                    <g fill="#000" fill-opacity="1" mask="url(#textDelBtnSvgMask)" class="svg_bg">
+                      <path d="M0 0h40v40H0z" />
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <s_sidebar>
+            <s_sidebar_element>
+            <s_if_var_searchtag>
+              <div class="tag_zone">
+                <h3 class="title_sidebar">tag</h3>
+                <div class="box_tag">
+                  <s_random_tags><a href="[##_tag_link_##]" class="[##_tag_class_##]"> [##_tag_name_##]</a></s_random_tags>
+                </div>
+              </div>
+            </s_if_var_searchtag>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <s_if_var_searchrecent>
+              <div class="tag_board">
+                <h3 class="title_sidebar">recent post</h3>
+                <ul class="list_sidebar">
+                  <s_rctps_rep>
+                    <li class="item_sidebar"><a href="[##_rctps_rep_link_##]"> [##_rctps_rep_title_##]</a></li>
+                  </s_rctps_rep>
+                </ul>
+              </div>
+            </s_if_var_searchrecent>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <s_if_var_searchreply>
+              <div class="tag_board">
+                <h3 class="title_sidebar">reply</h3>
+                <ul class="list_sidebar">
+                  <s_rctrp_rep>
+                    <li class="item_sidebar"><a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a></li>
+                  </s_rctrp_rep>
+                </ul>
+              </div>
+            </s_if_var_searchreply>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <s_if_var_searchnotice>
+              <s_rct_notice>
+                <div class="tag_board">
+                  <h3 class="title_sidebar">notice</h3>
+                  <ul class="list_sidebar">
+                    <s_rct_notice_rep>
+                      <li class="item_sidebar"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
+                    </s_rct_notice_rep>
+                  </ul>
+                </div>
+              </s_rct_notice>
+            </s_if_var_searchnotice>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <s_if_var_searcharch>
+              <div class="tag_board">
+                <h3 class="title_sidebar">아카이브</h3>
+                <ul class="list_sidebar">
+                  <s_archive_rep>
+                    <li class="item_sidebar"><a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a></li>
+                  </s_archive_rep>
+                </ul>
+              </div>
+            </s_if_var_searcharch>
+            </s_sidebar_element>
+          </s_sidebar>
+        </div>
+
+      </div>
+    </div>
+    <main id="main">
+      <s_cover_group>
+        <div class="area_cover">
+          <s_cover_rep>
+            <s_cover name='featured'>
+              <div class="type_featured">
+                <div class="slide_zone">
+                  <s_cover_item>
+                    <div class="slide_item">
+                      <div class="link_slide item-thumbnail" style="background-image:url('<s_cover_item_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>');">
+                        <div class="text_slide thema_apply">
+                          <strong>[##_cover_item_title_##]</strong>
+                          <p class="text">[##_cover_item_summary_##]</p>
+                          <a href="[##_cover_item_url_##]" class="link_detail">read more</a>
+                        </div>
+                      </div>
+                    </div>
+                  </s_cover_item>
+                </div>
+
+                <div class="box_arrow thema_apply">
+                  <button type="button" class="btn_arrow btn_prev"><span class="blind">left</span></button>
+                  <button type="button" class="btn_arrow btn_next"></span><span class="blind">right</span></button>
+                </div>
+
+                <div class="inner_main_slide">
+
+                </div>
+              </div>
+            </s_cover>
+
+            <s_cover name='post'>
+              <div class="type_post">
+
+                <h2 class="title_section">[##_cover_title_##]</h2>
+
+                <ul class="list_post">
+                  <s_cover_item>
+                    <li class="item_post">
+                      <a href="[##_cover_item_url_##]" class="link_post item-thumbnail" style="background-image:url('<s_cover_item_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')">
+                        <div class="info">
+                          <strong class="name">[##_cover_item_title_##]</strong>
+                          <s_cover_item_article_info>
+                            <span class="date">[##_cover_item_date_##]</span>
+                          </s_cover_item_article_info>
+                        </div>
+                      </a>
+                    </li>
+                  </s_cover_item>
+                </ul>
+              </div>
+            </s_cover>
+
+            <s_cover name='card'>
+              <div class="type_card">
+
+                <h2 class="title_section">[##_cover_title_##]</h2>
+
+                <ul class="list_type_card">
+                  <s_cover_item>
+                    <li class="item_card">
+                      <a href="[##_cover_item_url_##]" class="link_card">
+                        <span class="thumnail item-thumbnail" style="background-image:url('<s_cover_item_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')"></span>
+                        <strong>[##_cover_item_title_##]</strong>
+                        <p class="text">[##_cover_item_summary_##]</p>
+                      </a>
+                    </li>
+                  </s_cover_item>
+                </ul>
+              </div>
+            </s_cover>
+
+            <s_cover name='banner'>
+              <div class="type_banner">
+
+                <h2 class="title_section">[##_cover_title_##]</h2>
+
+                <ul class="list_type_banner">
+                  <s_cover_item>
+                    <li class="item_banner">
+                      <a href="[##_cover_item_url_##]" class="link_banner item-thumbnail" style="background-image:url('<s_cover_item_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')">
+                        <div class="box_content">
+                          <strong>[##_cover_item_title_##]</strong>
+                          <p class="text">[##_cover_item_summary_##]</p>
+                          <button class="btn_go">go</button>
+                        </div>
+                      </a>
+                    </li>
+                  </s_cover_item>
+                </ul>
+
+              </div>
+            </s_cover>
+
+            <s_cover name='notice'>
+              <div class="type_notice">
+
+                <h2 class="title_section">[##_cover_title_##]</h2>
+
+                <ul class="list_type_notice">
+                  <s_cover_item>
+                    <li class="item_notice">
+                      <a href="[##_cover_item_url_##]" class="link_notice">
+                        <span class="thumnail item-thumbnail" style="background-image:url('<s_cover_item_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')"></span>
+
+                        <div class="info">
+                          <strong>[##_cover_item_title_##]</strong>
+                          <p class="text">[##_cover_item_summary_##]</p>
+                          <s_cover_item_article_info>
+                            <span class="date">[##_cover_item_date_##]</span>
+                          </s_cover_item_article_info>
+                        </div>
+                      </a>
+                    </li>
+                  </s_cover_item>
+                </ul>
+
+              </div>
+            </s_cover>
+          </s_cover_rep>
+        </div>
+      </s_cover_group>
+
+      <s_list>
+        <div class="area_category category_type_[##_var_listType_##] category_search_list">
+          <s_if_var_itciderbanner>
+            <a href="[##_var_itciderbannerurl_##]"><img src="./images/[##_var_itciderbannerimg_##]"
+              width="100%" height="100%" alt="[##_var_itciderbanneralt_##]"><br></a>
+            </s_if_var_itciderbanner>
+          <h2 class="title_section">post list<span>([##_list_count_##])</span></h2>
+
+          <ul class="list_category">
+            <s_list_rep>
+              <li class="item_category">
+                <a href="[##_list_rep_link_##]" class="link_category">
+
+                    <span class="thumnail item-thumbnail" <s_list_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]')"</s_list_rep_thumbnail>></span>
+
+
+                  <div class="info">
+                    <s_if_var_itcidertitle>
+                    <strong class="name">[##_list_rep_title_##]</strong>
+                    </s_if_var_itcidertitle>
+                    <s_if_var_itcidersummary>
+                    <p class="text summary">[##_list_rep_summary_##]</p>
+                    </s_if_var_itcidersummary>
+                    <s_if_var_itciderdate>
+                    <span class="date">[##_list_rep_regdate_##]</span>
+                    </s_if_var_itciderdate>
+                  </div>
+                </a>
+              </li>
+            </s_list_rep>
+          </ul>
+        </div>
+      </s_list>
+
+      <div class="area_view">
+        <s_article_rep>
+
+          <s_permalink_article_rep>
+
+            <div class="area_article">
+
+              <div class="article_header type_article_header_cover">
+
+                <s_if_var_itcidercovernotgrad>
+                  <div class="inner_header" <s_article_rep_thumbnail>style="background-image:url('//i1.daumcdn.net/thumb/C600x600/?fname=[##_article_rep_thumbnail_url_##]')"</s_article_rep_thumbnail>>
+                  </s_if_var_itcidercovernotgrad>
+                <s_if_var_itcidercovergrad>
+                  <div class="inner_header">
+                  </s_if_var_itcidercovergrad>
+                  <div class="info_text">
+                    <strong class="title_post">[##_article_rep_title_##]</strong>
+                    <p class="info"><span class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <s_if_var_autoupdate>
+              <s_if_var_waiting>                                                
+                <div id="waiting">
+                    <img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/itcider.gif">
+                </div>
+            </s_if_var_waiting>
+          </s_if_var_autoupdate>
+
+              <s_if_var_manualupdate>
+            <s_if_var_waiting>                                                
+              <div id="waiting">
+                  <img src="./images/itcider.gif">
+              </div>
+          </s_if_var_waiting>
+        </s_if_var_manualupdate>
+
+              <div class="article_view">
+                <s_if_var_tocload>
+                  <div class="book-toc">
+                    <p class="toc_title"></p>
+                    <ul id="toc">summary</ul>
+                    </div>
+                  </s_if_var_tocload>
+                [##_article_rep_desc_##]
+              </div>
+
+              <div class="article_content">
+                <!-- <ul class="list_share list_sns">
+                                        <li class="item_share"><a href="#" class="link_share link_facebook" data-service="facebook"><span class="icon-Facebook"></span><span class="blind">페이스북</span></a></li>
+                                        <li class="item_share"><a href="#" class="link_share link_twitter" data-service="twitter"><span class="icon-Twitter"></span><span class="blind">트위터</span></a></li>
+                                        <li class="item_share"><a href="#" class="link_share link_story" data-service="kakaostory"><span class="icon-Story"></span><span class="blind">카카오스토리</span></a></li>
+                                        <li class="item_share"><a href="#" class="link_share link_kakao" data-service="kakaotalk"><span class="icon-Kakao"></span><span class="blind">카카오톡</span></a></li>
+                                    </ul> -->
+                <s_if_var_itciderposttag>
+                <s_tag_label>
+                  <div class="area_tag">
+                    <h3 class="title_tag">TAG</h3>
+                    <div class="tag_content thema_apply">[##_tag_label_rep_##]</div>
+                  </div>
+                  <!-- // area_tag -->
+                </s_tag_label>
+              </s_if_var_itciderposttag>
+
+                <s_if_var_itciderrelate>
+                <s_article_related>
+                  <!-- area_related -->
+                  <div class="area_related">
+                    <h3 class="title_related">related post</h3>
+                    <ul class="list_related">
+                      <s_article_related_rep>
+                        <li class="item_related">
+                          <a href="[##_article_related_rep_link_##]" class="link_related">
+                            <span class="thumnail item-thumbnail" style="background-image:url('<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/C250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>')"></span>
+                            <div class="box_content">
+                              <s_if_var_itciderrelatetitle>
+                              <strong>[##_article_related_rep_title_##]</strong>
+                              </s_if_var_itciderrelatetitle>
+                              <s_if_var_itciderrelatedate>
+                              <span class="info">[##_article_related_rep_date_##]</span>
+                              </s_if_var_itciderrelatedate>
+                            </div>
+                          </a>
+                        </li>
+                      </s_article_related_rep>
+                    </ul>
+                  </div>
+                </s_article_related>
+              </s_if_var_itciderrelate>
+                <s_if_var_itciderreplyset>
+                <div class="area_reply">
+
+                  <div class="box_reply_info">
+                    <a href="#rp" onclick="[##_article_rep_rp_link_##]" class="reply_events">comments <span>[##_article_rep_rp_cnt_##]</span></a>
+                  </div>
+
+                  <div class="reply_content">
+                    <button type="button" class="btn_more btn_replymore" style="display:none;">previous comment</button>
+
+                    <s_rp>
+                      <!-- box_comment_list -->
+                      <div class="box_comment_list">
+                        <s_rp_container>
+                          <ul class="list_reply">
+                            <s_rp_rep>
+                              <li id='[##_rp_rep_id_##]' class="item_reply [##_rp_rep_class_##]">
+                                <div class="thumbnail_reply">
+                                  <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]" width="50"
+                                    height="50" alt="profile">
+                                </div>
+                                <div class="box_reply_content">
+                                  <div class="user">[##_rp_rep_name_##]<span class="date"><span class="dot">ㆍ </span>[##_rp_rep_date_##]</span></div>
+                                  <p class="txt">[##_rp_rep_desc_##]</p>
+                                  <div class="modify">
+                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]">edit/delete</a><span class="slash">I</span><a
+                                      href="#" onclick="[##_rp_rep_onclick_reply_##]">comment</a>
+                                  </div>
+                                </div>
+
+                                <s_rp2_container>
+                                  <!-- list_reply_comment -->
+                                  <ul class="list_reply_comment">
+                                    <s_rp2_rep>
+                                      <li id='[##_rp_rep_id_##]' class="item_comment reply [##_rp_rep_class_##]">
+                                        <div class="ico_commnent">ㄴ</div>
+                                        <div class="thumbnail_reply">
+                                          <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
+                                            width="50" height="50" alt="profile">
+                                        </div>
+                                        <div class="box_reply_content">
+                                          <div class="user"><a class="link_name">[##_rp_rep_name_##]</a><span class="date"><span
+                                                class="dot">ㆍ </span>[##_rp_rep_date_##]</span></div>
+                                          <p class="txt">[##_rp_rep_desc_##]</p>
+                                          <div class="modify">
+                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]">edit/delete</a>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </s_rp2_rep>
+                                  </ul>
+                                </s_rp2_container>
+                              </li>
+                            </s_rp_rep>
+                          </ul>
+                        </s_rp_container>
+                      </div>
+
+                      <s_rp_input_form>
+                        <form method="post">
+                          <div class="reply_write">
+                            <s_rp_member>
+                              <s_rp_guest>
+                                <div class="form_guest">
+                                  <div class="box_inp">
+                                    <div class="inner_inp">
+                                      <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" title="name"
+                                        placeholder="name" class="inp_comment inp_name" />
+                                    </div>
+                                  </div>
+                                  <div class="box_inp">
+                                    <div class="inner_inp">
+                                      <input type="password" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]"
+                                        title="password" maxlength="12" placeholder="password" class="inp_comment inp_password" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </s_rp_guest>
+                            </s_rp_member>
+                            <div class="form_content">
+                              <textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]" placeholder="Please enter a comment"></textarea>
+                            </div>
+
+                            <div class="form_reg thema_apply">
+                              <label><input type="checkbox" name="[##_rp_input_is_secret_##]"> Private</label>
+                              <button type="button" class="btn_register" onclick="[##_rp_onclick_submit_##]">Leave a comment</button>
+                            </div>
+
+                          </div>
+                        </form>
+                      </s_rp_input_form>
+                    </s_rp>
+
+                  </div>
+                </s_if_var_itciderreplyset>
+
+                </div>
+              </div>
+
+            </div>
+
+
+          </s_permalink_article_rep>
+        </s_article_rep>
+      </div>
+
+      <s_article_protected>
+        <s_permalink_article_rep>
+        <div class="area_view">
+          <div class="area_article">
+            <div class="article_header">
+              <div class="inner_header" style="background-image:url('')">
+                <div class="info_text">
+                  <strong class="title_post">[##_article_rep_title_##]</strong>
+                  <p class="info"><span class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="article_view">
+              <form class="protected_form" onsubmit="[##_article_dissolve_##]">
+                <p>This is a protected article. Please enter your password to view the contents.</p>
+                <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" value=""
+                  placeholder="password" />
+                <button type="submit">confirm</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        </s_permalink_article_rep>
+
+      </s_article_protected>
+
+      <s_page_rep>
+        <div class="area_article">
+          <div class="article_header">
+            <div class="inner_header" style="background-image:url('')">
+              <div class="info_text">
+                <strong class="title_post">[##_article_rep_title_##]</strong>
+                <p class="info"><span class="date">[##_article_rep_date_##]
+                  </span></p>
+              </div>
+            </div>
+          </div>
+          <div class="article_view">
+            [##_article_rep_desc_##]
+          </div>
+        </div>
+      </s_page_rep>
+
+      <s_notice_rep>
+        <s_index_article_rep>
+          <div class="list_index category_type_[##_var_listType_##] category_index_list">
+            <div class="item_category">
+              <a href="[##_notice_rep_link_##]" class="link_category">
+                <span class="thumnail item-thumbnail" style="background-image:url('<s_notice_rep_thumbnail>//i1.daumcdn.net/thumb/C250x250/?fname=[##_notice_rep_thumbnail_url_##]</s_notice_rep_thumbnail>')"></span>
+                <div class="info">
+                  <strong class="name">[##_notice_rep_title_##]</strong>
+                  <p class="text summary">[##_notice_rep_summary_##]</p>
+                  <span class="date">[##_notice_rep_date_##]</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </s_index_article_rep>
+        <s_permalink_article_rep>
+          <div class="area_article">
+
+            <div class="article_header">
+              <div class="inner_header" style="background-image:url('')">
+                <div class="info_text">
+                  <strong class="title_post">[##_notice_rep_title_##]</strong>
+                  <p class="info"><span class="date">[##_notice_rep_date_##]</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="article_view">
+              [##_notice_rep_desc_##]
+            </div>
+          </div>
+
+          </div>
+        </s_permalink_article_rep>
+      </s_notice_rep>
+
+      <s_tag>
+        <div class="area_common">
+
+          <h3 class="title_common">tag</h3>
+          <div class="tag_zone">
+            <s_tag_rep>
+              <a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a>
+            </s_tag_rep>
+          </div>
+
+        </div>
+      </s_tag>
+
+      <s_local>
+        <div class="area_common">
+          <section id="localog" class="box_tag_trail row nonEntry main">
+            <h3 class="title_common">Local Log</h3>
+            <s_local_spot_rep>
+              <div class="spot" style="margin-left: [##_local_spot_depth_##]px">
+                [##_local_spot_##]
+              </div>
+            </s_local_spot_rep>
+            <s_local_info_rep>
+              <div class="info" style="margin-left: [##_local_info_depth_##]px">
+                <a href="[##_local_info_link_##]">[##_local_info_title_##]</a>
+              </div>
+            </s_local_info_rep>
+          </section>
+        </div>
+      </s_local>
+
+      <s_guest>
+        <div class="area_common">
+          <div class="area_article">
+            <div class="area_reply">
+
+              <h2 class="title_common">Free board</h2>
+
+              <!-- reply_content -->
+              <div class="reply_content">
+                <!-- box_comment_list -->
+                <div class="box_comment_list">
+                  <s_guest_container>
+                    <ul class="list_reply">
+                      <s_guest_rep>
+                        <li id='[##_guest_rep_id_##]' class="item_reply [##_guest_rep_class_##]">
+                          <div class="thumbnail_reply">
+                            <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png" width="50"
+                              height="50" alt="profile">
+                          </div>
+                          <div class="box_reply_content">
+                            <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
+                                [##_guest_rep_date_##]</span></div>
+                            <p class="txt">[##_guest_rep_desc_##]</p>
+                            <div class="modify">
+                              <a href="#" onclick="[##_guest_rep_onclick_delete_##]">edit/delete</a><span class="slash">I</span><a
+                                href="#" onclick="[##_guest_rep_onclick_reply_##]">comment</a>
+                            </div>
+                          </div>
+
+                          <s_guest_reply_container>
+                            <!-- list_reply_comment -->
+                            <ul class="list_reply_comment">
+                              <s_guest_reply_rep>
+                                <li id='[##_guest_rep_id_##]' class="item_comment reply [##_guest_rep_class_##]">
+                                  <div class="ico_commnent">ㄴ</div>
+                                  <div class="thumbnail_reply">
+                                    <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
+                                      width="50" height="50" alt="profile">
+                                  </div>
+                                  <div class="box_reply_content">
+                                    <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
+                                        [##_guest_rep_date_##]</span></div>
+                                    <p class="txt">[##_guest_rep_desc_##]</p>
+                                    <div class="modify">
+                                      <a href="#" onclick="[##_guest_rep_onclick_delete_##]">edit/delete</a>
+                                    </div>
+                                  </div>
+                                </li>
+                              </s_guest_reply_rep>
+                            </ul>
+                          </s_guest_reply_container>
+                        </li>
+                      </s_guest_rep>
+                    </ul>
+                  </s_guest_container>
+                </div>
+
+                <s_guest_input_form>
+                  <form method="post">
+                    <div class="reply_write">
+                      <s_guest_member>
+                        <s_guest_form>
+                          <div class="form_guest">
+                            <div class="box_inp">
+                              <div class="inner_inp">
+                                <input type="text" name="[##_guest_input_name_##]" value="name" title="name" placeholder="name"
+                                  class="inp_comment inp_name" />
+                              </div>
+                            </div>
+                            <div class="box_inp">
+                              <div class="inner_inp">
+                                <input type="text" name="[##_guest_input_password_##]" value="password" title="password"
+                                  placeholder="password" class="inp_comment inp_password" />
+                              </div>
+                            </div>
+                            <div class="box_inp">
+                              <div class="inner_inp">
+                                <input type="url" name="[##_guest_input_homepage_##]" value="website" title="website"
+                                  placeholder="website" class="inp_comment inp_homepage" />
+                              </div>
+                            </div>
+                          </div>
+                        </s_guest_form>
+                      </s_guest_member>
+                      <div class="form_content">
+                        <textarea id="[##_rguestinput_comment_##]" name="[##_guest_input_comment_##]" placeholder="Please leave a post in free board"></textarea>
+                      </div>
+
+                      <div class="form_reg thema_apply">
+                        <label><input type="checkbox" name="[##_guest_input_is_secret_##]"> Private</label>
+                        <button type="button" class="btn_register" onclick="[##_guest_onclick_submit_##]">Leave a post</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </s_guest_input_form>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </s_guest>
+
+      <s_paging>
+        <div class="area_paging">
+          <a [##_prev_page_##] class="link_page link_prev [##_no_more_prev_##]"><span class="icon-Keyboard-Arrow---Left"></span></a>
+          <div class="paging_num thema_apply">
+            <s_paging_rep>
+              <a [##_paging_rep_link_##] class="link_num">[##_paging_rep_link_num_##]</a>
+            </s_paging_rep>
+          </div>
+          <a [##_next_page_##] class="link_page link_next [##_no_more_next_##]"><span class="icon-Keyboard-Arrow---Right"></span></a>
+        </div>
+      </s_paging>
+    </main>
+
+    </div>
+
+    [##_revenue_list_lower_##]
+
+    <footer id="footer">
+      <div class="inner_footer">
+        <s_if_var_footerLink1Name>
+          <a href="[##_var_footerLink1Url_##]" class="link_footer">[##_var_footerLink1Name_##]</a>
+        </s_if_var_footerLink1Name>
+        <s_if_var_footerLink2Name>
+          <a href="[##_var_footerLink2Url_##]" class="link_footer">[##_var_footerLink2Name_##]</a>
+        </s_if_var_footerLink2Name>
+        <s_if_var_footerLink3Name>
+          <a href="[##_var_footerLink3Url_##]" class="link_footer">[##_var_footerLink3Name_##]</a>
+        </s_if_var_footerLink3Name>
+        <s_if_var_footerLink4Name>
+          <a href="[##_var_footerLink4Url_##]" class="link_footer">[##_var_footerLink4Name_##]</a>
+        </s_if_var_footerLink4Name>
+      </div>
+      <div>
+        <address>[##_var_footerCopyright_##]</address>
+      </div>
+
+    </footer>
+
+    </div>
+  </s_t3>
+
+  <s_if_var_autoupdate>
+   <!--shareurl-->
+<a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
+left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/url.png" width="40" alt="link copy by itcider.com"></a>
+  
+<!--shareurl-->
+	
+<!--sharesns-->
+
+<a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
+left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/share.png" width="40" alt="share by itcider.com"></a>
+	
+<!--sharesns-->
+
+<!--sharesns-->
+
+<a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
+right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/up.png" width="40" alt="go to top by itcider.com"></a>
+	
+<!--sharesns-->
+
+  </s_if_var_autoupdate>
+
+  <s_if_var_manualupdate>
+
+
+  <!--shareurl-->
+<a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
+left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40" alt="link copy by itcider.com"></a>
+  
+<!--shareurl-->
+	
+<!--sharesns-->
+
+<a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
+left: 60px;" id ="shared"><img src="./images/share.png" width="40" alt="share by itcider.com"></a>
+	
+<!--sharesns-->
+
+<!--sharesns-->
+
+<a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
+right: 10px;"><img src="./images/up.png" width="40" alt="go to top by itcider.com"></a>
+	
+<!--sharesns-->
+  </s_if_var_manualupdate>
+
+</body>
+
+<s_if_var_redirection>
+  <script>
+    var Original_URL = '[##_var_url1_##]';
+    var Replace_URL = '[##_var_urlreal_##]';
+    var online = document.URL;
+    if(online.match(Original_URL)) document.location.href = online.replace(Original_URL, Replace_URL);
+  </script>
+  <script>
+    var Original_URL = '[##_var_url2_##]';
+    var Replace_URL = '[##_var_urlreal_##]';
+    var online = document.URL;
+    if(online.match(Original_URL)) document.location.href = online.replace(Original_URL, Replace_URL);
+  </script>
+  </s_if_var_redirection>
+<s_if_var_autoupdate>                                            
+<s_if_var_lazyload1>
+<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/itciderlazyload.js" defer></script>
+</s_if_var_lazyload1>
+<s_if_var_lazyload2>
+<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/itciderlazyload1.js" defer></script>
+</s_if_var_lazyload2>
+</s_if_var_autoupdate>
+
+<s_if_var_manualupdate>                                        
+<s_if_var_lazyload1>
+<script src="./images/itciderlazyload.js" defer></script>
+</s_if_var_lazyload1>
+<s_if_var_lazyload2>
+<script src="./images/itciderlazyload1.js" defer></script>
+</s_if_var_lazyload2>
+</s_if_var_manualupdate>
+<link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/icomoon/icomoon.css" />
+
+  <s_if_var_autoupdate>
+
+  <s_if_var_webshare>
+    <script>
+
+function snsShare(title, url){
+
+if(navigator.share){
+
+navigator.share({
+title: '	[##_article_rep_title_##]', 
+text: '	[##_article_rep_desc_##]', 
+url: '[##_article_rep_link_##]', 
+
+});
+$().ready(function () {
+          $("#shared").click(function () {
+              const Toast = Swal.mixin({
+                  toast: true,
+                  position: 'center-center',
+                  showConfirmButton: false,
+                  timer: 3000,
+                  timerProgressBar: true,
+                  didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                  }
+              })
+
+              Toast.fire({
+                  icon: 'success',
+                  title: 'share completed'
+              })
+          });
+      });
+
+}else 
+
+$().ready(function () {
+          $("#shared").click(function () {
+              const Toast = Swal.mixin({
+                  toast: true,
+                  position: 'center-center',
+                  showConfirmButton: false,
+                  timer: 2500,
+                  timerProgressBar: true,
+                  didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                  }
+              })
+
+              Toast.fire({
+                  icon: 'error',
+                  title: 'The browser does not support sharing. Please use the share on the left.'
+              })
+          });
+      });
+
+
+}
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/itcidercopy.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </s_if_var_webshare> 
+<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/itcidercategory.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/itcider_top.js" defer></script>
+<s_if_var_tocload>
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/js.js" defer></script>
+</s_if_var_tocload>
+
+<s_if_var_discopy>
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/discopy.js" defer></script>
+</s_if_var_discopy>
+
+<s_if_var_noieoption>
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/noinese.js" defer></script>
+</s_if_var_noieoption>
+  </s_if_var_autoupdate>
+
+  
+
+  <s_if_var_manualupdate>
+  <s_if_var_webshare>
+    <script>
+
+      function snsShare(title, url){
+      
+      if(navigator.share){
+      
+      navigator.share({
+      title: '	[##_article_rep_title_##]', 
+      text: '	[##_article_rep_desc_##]', 
+      url: '[##_article_rep_link_##]', 
+      
+      });
+      $().ready(function () {
+                $("#shared").click(function () {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'center-center',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+      
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'share completed'
+                    })
+                });
+            });
+      
+      }else 
+      
+      $().ready(function () {
+                $("#shared").click(function () {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'center-center',
+                        showConfirmButton: false,
+                        timer: 2500,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+      
+                    Toast.fire({
+                        icon: 'error',
+                        title: 'The browser does not support sharing. Please use the share on the left.'
+                    })
+                });
+            });
+      
+      
+      }
+      
+          </script>
+    <script src="./images/itcidercopy.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </s_if_var_webshare> 
+<script src="./images/itcidercategory.js" defer></script>
+<script src="./images/itcider_top.js" defer></script>
+<s_if_var_tocload>
+  <script src="./images/js.js" defer></script>
+</s_if_var_tocload>
+
+<s_if_var_discopy>
+  <script src="./images/discopy.js" defer></script>
+</s_if_var_discopy>
+
+<s_if_var_noieoption>
+  <script src="./images/noinese.js" defer></script>
+</s_if_var_noieoption>
+  </s_if_var_manualupdate>
+
+<s_if_var_tocload>
+  <style>
+    .book-toc ul {
+    list-style-type: [##_var_tocoption_##];
+}
+  </style>
+<script>
+  $(function(){
+  $("#toc").toc( {content: ".article_view", headings: "[##_var_tocset_##]" , top: -90, isBlink : true, blinkColor : '#000000' } )
+  });
+  </script>
+<script>
+  $('.article_view').find('table').each(function (idx, el) {
+    $(el).wrap('<div class="table-overflow">')
+  })
+</script>
+</s_if_var_tocload>
+
+
+<s_if_var_daumcdnfont>
+  <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/AvenirLTStd/AvenirLTStd.css" />
+  <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/SpoqaHanSans/SpoqaHanSans.css" />
+  </s_if_var_daumcdnfont>
+  
+<s_if_var_copyscript>
+
+
+  <script>
+      (function($) {
+          $("body").bind('copy', function (e) {
+  
+              var url = document.location.href,
+                  decodedUrl = decodeURI(url),
+                  selection = window.getSelection();
+  
+  
+              if (typeof window.getSelection == "undefined") {//IE8 or earlier...
+                  event.preventDefault();
+  
+                  var pagelink = '\n\n read more: ' + decodedUrl,
+                      copytext = selection + pagelink;
+  
+                  if (window.clipboardData) {
+                      window.clipboardData.setData('Text', copytext);
+                  }
+                  return;
+              }
+              var body_element = document.getElementsByTagName('body')[0];
+  
+              if (("" + selection).length < 75) return;
+  
+              var newdiv = document.createElement('div');
+              newdiv.style.position = 'absolute';
+              newdiv.style.left = '-99999px';
+              body_element.appendChild(newdiv);
+              newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+  
+              if (selection.getRangeAt(0).commonAncestorContainer.nodeName == "PRE") {
+                  newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+              }
+  
+              newdiv.innerHTML += '<br /><br />[##_var_copyscriptsource_##] original blog post:<a href="' + url + '">' + escapeHTML(decodedUrl) + '</a><br /><br /><br /> ';
+  
+              selection.selectAllChildren(newdiv);
+  
+              window.setTimeout(function () {
+                  body_element.removeChild(newdiv);
+              }, 200);
+          });
+      })(tjQuery);
+    
+    
+  </script>
+  </s_if_var_copyscript>
+<!--
+skin name : fast itcider (en version)
+version : v3.1
+author : itcider.com
+website : itcider.com
+license : itcider license
+warning :
+Comments cannot be edited or deleted
+fi skin phrase cannot be deleted
+An unlimited number of skins can be applied to the site
+Redistribution or unauthorized use of code is strictly prohibited
+Distributable only on the itcider official website
+If you do not follow the above precautions, you will not be able to use it.
+-->
+</html>
