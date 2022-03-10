@@ -343,7 +343,7 @@
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>red</default>
+                <default>rgba(255,255,255,0)</default>
                 <description>
                     <![CDATA[목차 그라데이션 컬러1]]>
                 </description>
@@ -355,7 +355,7 @@
                 </label>
                 <type>STRING</type>
                 <option />
-                <default>blue</default>
+                <default>rgb(97, 255, 92)</default>
                 <description>
                     <![CDATA[목차 그라데이션 컬러2]]>
                 </description>
