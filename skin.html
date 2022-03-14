@@ -25,6 +25,20 @@ If you do not follow the above precautions, you will not be able to use it.
   <meta name="description" Content="[##_desc_##]" />
   <meta name="author" content="[##_var_metaauthor_##]" />
   <meta charset="utf-8" />
+  <link rel="preconnect" href="https://googleads.g.doubleclick.net/">
+  <link rel="preconnect" href="https://www.googletagmanager.com/">
+  <link rel="preconnect" href="https://tpc.googlesyndication.com/">
+  <link rel="preconnect" href="https://www.google-analytics.com/">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net/">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com/">
+  
+  <link rel="dns-prefetch" href="https://blog.kakaocdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="//i1.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://t1.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://tistory1.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://tistory2.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://tistory3.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://tistory4.daumcdn.net/" crossorigin>
   <s_if_var_metaportal>
   [##_var_navermeta_##]
   [##_var_googlemeta_##]
@@ -77,7 +91,7 @@ If you do not follow the above precautions, you will not be able to use it.
 
       [##_revenue_list_upper_##]
       <header class="box_header">
-        <h2 class="title_logo">
+        <h1 class="title_logo">
           <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
             <s_if_var_logoImage>
               <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
@@ -86,7 +100,7 @@ If you do not follow the above precautions, you will not be able to use it.
               [##_title_##]
             </s_not_var_logoImage>
           </a>
-        </h2>
+        </h1>
 
         <button class="btn_search"></button>
         <button type="button" class="btn_menu" title="menu"><span class="blind">menu</span></button>
@@ -97,7 +111,7 @@ If you do not follow the above precautions, you will not be able to use it.
 
           <div class="inner_sidebar">
             <div class="sidebar_header">
-              <h2 class="title_logo">
+              <h1 class="title_logo">
                 <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
                   <s_if_var_logoImage>
                     <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
@@ -106,7 +120,7 @@ If you do not follow the above precautions, you will not be able to use it.
                     [##_title_##]
                   </s_not_var_logoImage>
                 </a>
-              </h2>
+              </h1>
               <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
             </div>
 
@@ -181,7 +195,7 @@ If you do not follow the above precautions, you will not be able to use it.
     <div class="area_popup" style="display: none;">
       <div class="area_search thema_apply">
         <div class="search_header">
-          <h2 class="title_logo">
+          <h1 class="title_logo">
             <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
               <s_if_var_logoImage>
                 <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
@@ -190,7 +204,7 @@ If you do not follow the above precautions, you will not be able to use it.
                 [##_title_##]
               </s_not_var_logoImage>
             </a>
-          </h2>
+          </h1>
           <button type="button" class="btn_close" title="close"><span class="icon-Close"></span></button>
         </div>
 
@@ -322,7 +336,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='post'>
               <div class="type_post">
 
-                <h2 class="title_section">[##_cover_title_##]</h2>
+                <h1 class="title_section">[##_cover_title_##]</h1>
 
                 <ul class="list_post">
                   <s_cover_item>
@@ -344,7 +358,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='card'>
               <div class="type_card">
 
-                <h2 class="title_section">[##_cover_title_##]</h2>
+                <h1 class="title_section">[##_cover_title_##]</h1>
 
                 <ul class="list_type_card">
                   <s_cover_item>
@@ -363,7 +377,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='banner'>
               <div class="type_banner">
 
-                <h2 class="title_section">[##_cover_title_##]</h2>
+                <h1 class="title_section">[##_cover_title_##]</h1>
 
                 <ul class="list_type_banner">
                   <s_cover_item>
@@ -385,7 +399,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='notice'>
               <div class="type_notice">
 
-                <h2 class="title_section">[##_cover_title_##]</h2>
+                <h1 class="title_section">[##_cover_title_##]</h1>
 
                 <ul class="list_type_notice">
                   <s_cover_item>
@@ -417,7 +431,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <a href="[##_var_itciderbannerurl_##]"><img src="./images/[##_var_itciderbannerimg_##]"
               width="100%" height="100%" alt="[##_var_itciderbanneralt_##]" ><br></a>
             </s_if_var_itciderbanner>
-          <h2 class="title_section">post list<span>([##_list_count_##])</span></h2>
+          <h1 class="title_section">post list<span>([##_list_count_##])</span></h1>
 
           <ul class="list_category">
             <s_list_rep>
@@ -760,7 +774,7 @@ If you do not follow the above precautions, you will not be able to use it.
           <div class="area_article">
             <div class="area_reply">
 
-              <h2 class="title_common">Free board</h2>
+              <h1 class="title_common">Free board</h1>
 
               <!-- reply_content -->
               <div class="reply_content">
