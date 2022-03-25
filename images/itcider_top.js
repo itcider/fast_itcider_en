@@ -1,6 +1,6 @@
 /*
 skin name : fast itcider (en version)
-version : v3.1
+version : V4.0
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -33,7 +33,7 @@ function topFunction() {
 } 
 /*
 skin name : fast itcider (en version)
-version : v3.1
+version : V4.0
 author : itcider.com
 website : itcider.com
 license : itcider license
