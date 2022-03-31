@@ -1,6 +1,6 @@
 <!--
 skin name : fast itcider (en version)
-version : V4.0
+version : V4.1
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -46,15 +46,24 @@ If you do not follow the above precautions, you will not be able to use it.
   <link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
   <link rel="stylesheet" href="/favicon.ico">
 
+   <s_not_var_jqueryconfig>
+    <script type="application/javascript">
+      window.jQuery = window.$ = window.tjQuery; 
+    </script>
+    </s_not_var_jqueryconfig>
+
+    <s_if_var_jqueryconfig>
+      <script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script>
+    </s_if_var_jqueryconfig>
+
   <s_if_var_manualupdate>                                            
   <link rel="stylesheet" href="./style.css" />                                              
-  <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>     
   </s_if_var_manualupdate>                                            
 
   <s_if_var_autoupdate>                                            
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev4-0.css" />                                              
-  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/jquery.min.js"></script>   
-  </s_if_var_autoupdate>                                            
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev4-1.css" />                                              
+  </s_if_var_autoupdate>  
+                                        
 
 </head>
 
@@ -777,6 +786,8 @@ If you do not follow the above precautions, you will not be able to use it.
       <s_guest>
         <div class="area_common">
           <div class="area_article">
+            <s_if_var_itciderguestbookconfig>
+
             <div class="area_reply">
 
               <h1 class="title_common">Free board</h1>
@@ -845,7 +856,7 @@ If you do not follow the above precautions, you will not be able to use it.
                             </div>
                             <div class="box_inp">
                               <div class="inner_inp">
-                                <input type="text" name="[##_guest_input_password_##]" value="password" title="password"
+                                <input type="password" name="[##_guest_input_password_##]" value="password" title="password"
                                   placeholder="password" class="inp_comment inp_password" />
                               </div>
                             </div>
@@ -873,7 +884,12 @@ If you do not follow the above precautions, you will not be able to use it.
               </div>
 
             </div>
-
+          </s_if_var_itciderguestbookconfig>
+          <s_not_var_itciderguestbookconfig>
+            <h1 class="title_common">
+              Free board is disabled.
+            </h1>
+          </s_not_var_itciderguestbookconfig>
           </div>
         </div>
       </s_guest>
@@ -1247,7 +1263,7 @@ $().ready(function () {
   </s_if_var_copyscript>
 <!--
 skin name : fast itcider (en version)
-version : V4.0
+version : V4.1
 author : itcider.com
 website : itcider.com
 license : itcider license
