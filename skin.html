@@ -1,6 +1,6 @@
 <!--
 skin name : fast itcider (en version)
-version : V4.1
+version : V4.2
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -61,7 +61,7 @@ If you do not follow the above precautions, you will not be able to use it.
   </s_if_var_manualupdate>                                            
 
   <s_if_var_autoupdate>                                            
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev4-1.css" />                                              
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev4-2.css" />                                              
   </s_if_var_autoupdate>  
                                         
 
@@ -108,7 +108,7 @@ If you do not follow the above precautions, you will not be able to use it.
           </a>
         </h1>
 
-        <button class="btn_search"></button>
+        <button type="button" class="btn_search"></button>
         <button type="button" class="btn_menu" title="menu"><span class="blind">menu</span></button>
       </header>
 
@@ -443,7 +443,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_list_rep>
               <li class="item_category">
                 <a href="[##_list_rep_link_##]" class="link_category">
-                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" loading="lazy"/>
+                  <span class="thumnail item-thumbnail"><img src="<s_list_rep_thumbnail>//i1.daumcdn.net/thumb/C400x400/?fname=[##_list_rep_thumbnail_##]</s_list_rep_thumbnail>" alt="blog thumbnail" loading="lazy"/>
                   </span>
 
 
@@ -550,7 +550,7 @@ If you do not follow the above precautions, you will not be able to use it.
                           <a href="[##_article_related_rep_link_##]" class="link_related">
                             <span class="thumnail item-thumbnail"><img
                                 src="<s_article_related_rep_thumbnail>//i1.daumcdn.net/thumb/S250x250/?fname=[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>"
-                                loading="lazy" /></span>
+                                loading="lazy" alt="blog related posts" /></span>
                             <div class="box_content">
                               <s_if_var_itciderrelatetitle>
                               <strong>[##_article_related_rep_title_##]</strong>
@@ -927,7 +927,7 @@ If you do not follow the above precautions, you will not be able to use it.
         </s_if_var_footerLink4Name>
       </div>
       <div>
-        <address>[##_var_footerCopyright_##]</address>
+        <p>[##_var_footerCopyright_##]</p>
       </div>
 
     </footer>
@@ -946,14 +946,14 @@ left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_
 	
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/share.png" width="40" height="40" alt="share by itcider.com"></a>
 	
 <!--sharesns-->
 
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/up.png" width="40" height="40" alt="go to top by itcider.com"></a>
 	
 <!--sharesns-->
@@ -972,14 +972,14 @@ left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40"height="40" a
 	
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="snsShare('title','url')"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="./images/share.png" width="40"height="40" alt="share by itcider.com"></a>
 	
 <!--sharesns-->
 
 <!--sharesns-->
 
-<a class="sharesns" type="button" onclick="topFunction()"  alt="shared" style="
+<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="./images/up.png" width="40"height="40" alt="go to top by itcider.com"></a>
 	
 <!--sharesns-->
@@ -1261,9 +1261,11 @@ $().ready(function () {
     
   </script>
   </s_if_var_copyscript>
+  <div id="Copyright_Message">
+  </div>
 <!--
 skin name : fast itcider (en version)
-version : V4.1
+version : V4.2
 author : itcider.com
 website : itcider.com
 license : itcider license
