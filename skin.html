@@ -1,6 +1,6 @@
 <!--
 skin name : fast itcider (en version)
-version : V4.2
+version : V4.3
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -19,10 +19,15 @@ If you do not follow the above precautions, you will not be able to use it.
 <head>
   <title>[##_page_title_##]</title>
   <meta name="title" content="[##_page_title_##] : [##_title_##]" />
+  <meta name="description" Content="[##_desc_##]" />
   <meta name="keywords" content="[##_var_metakeyword_##]" />
   <meta name="author" content="[##_var_metaauthor_##]" />
   <meta charset="utf-8" />
-  <link rel="preconnect" href="https://googleads.g.doubleclick.net/">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
+<link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+<link rel="preconnect" href="https://googleads.g.doubleclick.net/">
   <link rel="preconnect" href="https://www.googletagmanager.com/">
   <link rel="preconnect" href="https://tpc.googlesyndication.com/">
   <link rel="preconnect" href="https://www.google-analytics.com/">
@@ -40,11 +45,6 @@ If you do not follow the above precautions, you will not be able to use it.
   [##_var_navermeta_##]
   [##_var_googlemeta_##]
   </s_if_var_metaportal>
-  <meta name="viewport"
-    content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-  <link rel="stylesheet" rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
-  <link rel="stylesheet" href="/favicon.ico">
 
    <s_not_var_jqueryconfig>
     <script type="application/javascript">
@@ -61,7 +61,7 @@ If you do not follow the above precautions, you will not be able to use it.
   </s_if_var_manualupdate>                                            
 
   <s_if_var_autoupdate>                                            
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev4-2.css" />                                              
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/styleV4-3.css" />                                              
   </s_if_var_autoupdate>  
                                         
 
@@ -342,7 +342,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='post'>
               <div class="type_post">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_post">
                   <s_cover_item>
@@ -364,7 +364,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='card'>
               <div class="type_card">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_type_card">
                   <s_cover_item>
@@ -383,7 +383,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='banner'>
               <div class="type_banner">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_type_banner">
                   <s_cover_item>
@@ -405,7 +405,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <s_cover name='notice'>
               <div class="type_notice">
 
-                <h1 class="title_section">[##_cover_title_##]</h1>
+                <h2 class="title_section">[##_cover_title_##]</h2>
 
                 <ul class="list_type_notice">
                   <s_cover_item>
@@ -437,7 +437,7 @@ If you do not follow the above precautions, you will not be able to use it.
             <a href="[##_var_itciderbannerurl_##]"><img src="./images/[##_var_itciderbannerimg_##]"
               width="100%" height="100%" alt="[##_var_itciderbanneralt_##]" ><br></a>
             </s_if_var_itciderbanner>
-          <h1 class="title_section">post list<span>([##_list_count_##])</span></h1>
+          <h2 class="title_section">post list<span>([##_list_count_##])</span></h2>
 
           <ul class="list_category">
             <s_list_rep>
@@ -790,7 +790,7 @@ If you do not follow the above precautions, you will not be able to use it.
 
             <div class="area_reply">
 
-              <h1 class="title_common">Free board</h1>
+              <h2 class="title_common">Free board</h2>
 
               <!-- reply_content -->
               <div class="reply_content">
@@ -886,9 +886,9 @@ If you do not follow the above precautions, you will not be able to use it.
             </div>
           </s_if_var_itciderguestbookconfig>
           <s_not_var_itciderguestbookconfig>
-            <h1 class="title_common">
+            <h2 class="title_common">
               Free board is disabled.
-            </h1>
+            </h2>
           </s_not_var_itciderguestbookconfig>
           </div>
         </div>
@@ -939,6 +939,8 @@ If you do not follow the above precautions, you will not be able to use it.
     <s_if_var_webshare>
 
    <!--shareurl-->
+   <s_if_var_shareurlcopybtn>
+
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
 left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/url.png" width="40" height="40" alt="link copy by itcider.com"></a>
   
@@ -948,14 +950,17 @@ left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_
 
 <a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/share.png" width="40" height="40" alt="share by itcider.com"></a>
-	
+	    </s_if_var_shareurlcopybtn>
+
 <!--sharesns-->
 
 <!--sharesns-->
+<s_if_var_gototopbtn>
 
 <a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/up.png" width="40" height="40" alt="go to top by itcider.com"></a>
-	
+	</s_if_var_gototopbtn>
+
 <!--sharesns-->
   </s_if_var_webshare>
 
@@ -965,6 +970,7 @@ right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/imag
 
     <s_if_var_webshare>
   <!--shareurl-->
+    <s_if_var_shareurlcopybtn>
 <a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
 left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40"height="40" alt="link copy by itcider.com"></a>
   
@@ -974,14 +980,17 @@ left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40"height="40" a
 
 <a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
 left: 60px;" id ="shared"><img src="./images/share.png" width="40"height="40" alt="share by itcider.com"></a>
-	
+	    </s_if_var_shareurlcopybtn>
+
 <!--sharesns-->
 
 <!--sharesns-->
+<s_if_var_gototopbtn>
 
 <a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
 right: 10px;"><img src="./images/up.png" width="40"height="40" alt="go to top by itcider.com"></a>
-	
+	</s_if_var_gototopbtn>
+
 <!--sharesns-->
     </s_if_var_webshare>
   </s_if_var_manualupdate>
@@ -1265,7 +1274,7 @@ $().ready(function () {
   </div>
 <!--
 skin name : fast itcider (en version)
-version : V4.2
+version : V4.3
 author : itcider.com
 website : itcider.com
 license : itcider license
