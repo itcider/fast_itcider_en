@@ -1,6 +1,6 @@
 <!--
 skin name : fast itcider (en version)
-version : V4.3
+version : V4.4
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -38,8 +38,7 @@ If you do not follow the above precautions, you will not be able to use it.
   <link rel="dns-prefetch" href="//i1.daumcdn.net/" crossorigin>
   <link rel="dns-prefetch" href="https://t1.daumcdn.net/" crossorigin>
   <link rel="dns-prefetch" href="https://tistory1.daumcdn.net/" crossorigin>
-  <link rel="dns-prefetch" href="https://tistory2.daumcdn.net/" crossorigin>
-  <link rel="dns-prefetch" href="https://tistory3.daumcdn.net/" crossorigin>
+  <link rel="dns-prefetch" href=".nk rel="dns-prefetch" href="https://tistory3.daumcdn.net/" crossorigin>
   <link rel="dns-prefetch" href="https://tistory4.daumcdn.net/" crossorigin>
   <s_if_var_metaportal>
   [##_var_navermeta_##]
@@ -61,7 +60,7 @@ If you do not follow the above precautions, you will not be able to use it.
   </s_if_var_manualupdate>                                            
 
   <s_if_var_autoupdate>                                            
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/styleV4-3.css" />                                              
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/styleV4-4.css" />                                              
   </s_if_var_autoupdate>  
                                         
 
@@ -81,7 +80,15 @@ If you do not follow the above precautions, you will not be able to use it.
     }
       </style>
     </s_if_var_itcidercovergrad>
-  
+    <s_if_var_sharesearchbtncolor>
+      <style>              
+	.shareBtn li {
+	border: [##_var_toolkeyborderpx_##]px solid [##_var_toolkeybordercolor_##];
+	border-radius: 10px;
+	background: [##_var_toolkeybackgroundcolor_##];
+	}
+        </style>
+    </s_if_var_sharesearchbtncolor>
 <!-- css and js load -->
 
 
@@ -939,28 +946,27 @@ If you do not follow the above precautions, you will not be able to use it.
     <s_if_var_webshare>
 
    <!--shareurl-->
+   <div class="shareBtn">
+    <ul>
    <s_if_var_shareurlcopybtn>
-
-<a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
-left: 10px;" id ="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/url.png" width="40" height="40" alt="link copy by itcider.com"></a>
-  
-<!--shareurl-->
-	
-<!--sharesns-->
-
-<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
-left: 60px;" id ="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/share.png" width="40" height="40" alt="share by itcider.com"></a>
-	    </s_if_var_shareurlcopybtn>
+    <li>
+      <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+      <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+        </li>
+      </s_if_var_shareurlcopybtn>
 
 <!--sharesns-->
 
 <!--sharesns-->
 <s_if_var_gototopbtn>
-
-<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
-right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/up.png" width="40" height="40" alt="go to top by itcider.com"></a>
-	</s_if_var_gototopbtn>
-
+  <li>
+  <s_if_var_sharesearchbtn>
+    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>    <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+    </li>
+  </s_if_var_gototopbtn>
+</ul>
+</div>
 <!--sharesns-->
   </s_if_var_webshare>
 
@@ -970,26 +976,29 @@ right: 10px;"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/imag
 
     <s_if_var_webshare>
   <!--shareurl-->
-    <s_if_var_shareurlcopybtn>
-<a class="sharesns" href="#" onclick="clip(); return false;" alt="url" style="
-left: 10px;" id ="urlcopied"><img src="./images/url.png" width="40"height="40" alt="link copy by itcider.com"></a>
-  
-<!--shareurl-->
-	
-<!--sharesns-->
-
-<a class="sharesns" href="#" type="button" onclick="snsShare('title','url')"  alt="shared" style="
-left: 60px;" id ="shared"><img src="./images/share.png" width="40"height="40" alt="share by itcider.com"></a>
-	    </s_if_var_shareurlcopybtn>
+  <div class="shareBtn">
+    <ul>
+   <s_if_var_shareurlcopybtn>
+    <li>
+      <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+      <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+        </li>
+      </s_if_var_shareurlcopybtn>
 
 <!--sharesns-->
 
 <!--sharesns-->
 <s_if_var_gototopbtn>
+  <li>
+  <s_if_var_sharesearchbtn>
+    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>  
 
-<a class="sharesns" href="#" type="button" onclick="topFunction()"  alt="shared" style="
-right: 10px;"><img src="./images/up.png" width="40"height="40" alt="go to top by itcider.com"></a>
-	</s_if_var_gototopbtn>
+    <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+    </li>
+  </s_if_var_gototopbtn>
+</ul>
+</div>
 
 <!--sharesns-->
     </s_if_var_webshare>
@@ -1274,7 +1283,7 @@ $().ready(function () {
   </div>
 <!--
 skin name : fast itcider (en version)
-version : V4.3
+version : V4.4
 author : itcider.com
 website : itcider.com
 license : itcider license
