@@ -19,7 +19,7 @@ If you do not follow the above precautions, you will not be able to use it.
     color: #1E1E1E !important;
   }
   #toc a:hover {
-    background: linear-gradient(180deg, #000 50%, rgb(141, 141, 141) 50%) !important;
+    background: linear-gradient(180deg, #1E1E1E 50%, rgb(141, 141, 141) 50%) !important;
   }
   @media screen and (max-width: 767px) {
     #header h1 {
