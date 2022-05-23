@@ -1,6 +1,6 @@
 /*
 skin name : fast itcider (en version)
-version : V4.4
+version : V5.0
 author : itcider.com
 website : itcider.com
 license : itcider license
