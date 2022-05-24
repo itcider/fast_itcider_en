@@ -1,6 +1,6 @@
 /*
 skin name : fast itcider (en version)
-version : V5.0
+version : V5.1
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -49,7 +49,7 @@ $().ready(function () {
 
         /*
 skin name : fast itcider (en version)
-version : V5.0
+version : V5.1
 author : itcider.com
 website : itcider.com
 license : itcider license
