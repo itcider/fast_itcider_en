@@ -1,6 +1,6 @@
 <!--
 skin name : fast itcider (en version)
-version : V5.0
+version : V5.1
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -51,11 +51,14 @@ If you do not follow the above precautions, you will not be able to use it.
     <s_if_var_jqueryconfig>
       <script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-3.2.1.min.js"></script>
     </s_if_var_jqueryconfig>
-    <s_if_var_manualupdate>                                            
+
+    <s_if_var_manualupdate>            
+    <link rel="stylesheet" href="./images/[##_var_darkmodeconfig_##].css" />                                  
     <link rel="stylesheet" href="./style.css" />                                              
     </s_if_var_manualupdate>                                            
-    <s_if_var_autoupdate>                                            
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev5-0.css" />                                              
+    <s_if_var_autoupdate>            
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/[##_var_darkmodeconfig_##].css" />                                                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev5-1.css" />                                              
     </s_if_var_autoupdate>                             
 </head>
 
@@ -66,10 +69,18 @@ If you do not follow the above precautions, you will not be able to use it.
     </style>
   </s_if_var_itcidercovernotgrad>
   <s_if_var_itcidercovergrad>
+    <style>
+    @media (prefers-color-scheme: dark) {              
+      .type_article_header_cover .inner_header {
+        height: [##_var_gradpixel_##]px; 
+        background: linear-gradient(to bottom right, [##_var_darkgradcolor1_##],[##_var_darkgradcolor2_##],[##_var_darkgradcolor3_##])!important;
+      }
+    }
+        </style>
     <style>              
     .type_article_header_cover .inner_header {
       height: [##_var_gradpixel_##]px; 
-      background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##]);
+      background: linear-gradient(to bottom right, [##_var_gradcolor1_##],[##_var_gradcolor2_##],[##_var_gradcolor3_##]);
     }
       </style>
   </s_if_var_itcidercovergrad>
@@ -934,15 +945,15 @@ If you do not follow the above precautions, you will not be able to use it.
     <ul>
    <s_if_var_shareurlcopybtn>
     <li>
-      <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="./images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
-      <a type="button" onclick="snsShare('title','url')" id="shared"><img src="./images/share.png" width="40" alt="공유하기 by itcider.com"></a>
+      <a  type="button" href="#" onclick="clip(); return false;" id="urlcopied"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/url.png" width="40" alt="링크 복사하기 by itcider.com"></a>
+      <a type="button" onclick="snsShare('title','url')" id="shared"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/share.png" width="40" alt="공유하기 by itcider.com"></a>
         </li>
   </s_if_var_shareurlcopybtn>
 <s_if_var_gototopbtn>
   <li>
   <s_if_var_sharesearchbtn>
-    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="./images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
-  </s_if_var_sharesearchbtn>    <a type="button" onclick="topFunction()"><img src="./images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
+    <a  href="[##_var_sharesearchlink_##]" type="button"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/search.png" width="40" alt="[##_var_sharesearchalt_##]"></a>
+  </s_if_var_sharesearchbtn>    <a type="button" onclick="topFunction()"><img src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider/images/up.png" width="40" alt="상단으로 올라가기 by itcider.com"></a>
     </li>
   </s_if_var_gototopbtn>
 </ul>
@@ -1181,6 +1192,14 @@ $().ready(function () {
 
 <s_if_var_tocload>
   <style>
+    @media (prefers-color-scheme: dark) {
+    
+    #toc a:hover {
+      background: linear-gradient(180deg, [##_var_darktocgrad1_##] 50%, [##_var_darktocgrad2_##] 50%)!important;
+    }
+    }
+      </style>
+  <style>
     .book-toc ul {
     list-style-type: [##_var_tocoption_##];
 }
@@ -1260,7 +1279,7 @@ $().ready(function () {
   </div>
 <!--
 skin name : fast itcider (en version)
-version : V5.0
+version : V5.1
 author : itcider.com
 website : itcider.com
 license : itcider license
