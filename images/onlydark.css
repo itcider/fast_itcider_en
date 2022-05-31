@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 skin name : fast itcider (en version)
-version : V5.1
+version : V5.2
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -35,9 +35,7 @@ If you do not follow the above precautions, you will not be able to use it.
     background-color: #1E1E1E !important;
   }
 
-  code.hijs {
-    background-color: #fff !important;
-  }
+
 
   footer,
   #header,
@@ -74,8 +72,11 @@ If you do not follow the above precautions, you will not be able to use it.
     color: rgb(212, 212, 212) !important;
   }
 
-  span {
-    color: rgb(212, 212, 212) !important;
+  span:not(.article_view pre code.hljs span) {
+    color: rgb(212, 212, 212) ;
+  }
+  code.hljs {
+    background-color: #1E1E1E !important;
   }
 
   span.selected {
@@ -106,8 +107,11 @@ If you do not follow the above precautions, you will not be able to use it.
   ul,
   li,
   p span {
-    color: #aaa !important;
+    color: #aaa ;
   }
+  .article_view p {
+	color:#eee !important;
+	}
 
   ul,
   li,
@@ -348,7 +352,7 @@ If you do not follow the above precautions, you will not be able to use it.
 
 /*
 skin name : fast itcider (en version)
-version : V5.1
+version : V5.2
 author : itcider.com
 website : itcider.com
 license : itcider license
