@@ -1,6 +1,6 @@
 <!--
 skin name : fast itcider (en version)
-version : V5.3
+version : V5.4
 author : itcider.com
 website : itcider.com
 license : itcider license
@@ -58,7 +58,7 @@ If you do not follow the above precautions, you will not be able to use it.
     </s_if_var_manualupdate>                                            
     <s_if_var_autoupdate>            
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/[##_var_darkmodeconfig_##].css" />                                                                              
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev5-3.css" />                                              
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/stylev5-4.css" />                                              
     </s_if_var_autoupdate>                             
 </head>
 
@@ -1112,9 +1112,9 @@ $().ready(function () {
   <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/discopy.js" defer></script>
 </s_if_var_discopy>
 
-<s_if_var_noieoption>
-  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/noinese.js" defer></script>
-</s_if_var_noieoption>
+<s_if_var_ieredirect>
+  <script src="https://cdn.jsdelivr.net/gh/itcider/fast_itcider_en/images/[##_var_ieconfig_##].js" defer></script>
+</s_if_var_ieredirect>
   </s_if_var_autoupdate>
 
   
@@ -1194,9 +1194,9 @@ $().ready(function () {
   <script src="./images/discopy.js" defer></script>
 </s_if_var_discopy>
 
-<s_if_var_noieoption>
-  <script src="./images/noinese.js" defer></script>
-</s_if_var_noieoption>
+<s_if_var_ieredirect>
+  <script src="./images/[##_var_ieconfig_##].js" defer></script>
+</s_if_var_ieredirect>
   </s_if_var_manualupdate>
 
 <s_if_var_tocload>
@@ -1288,7 +1288,7 @@ $().ready(function () {
   </div>
 <!--
 skin name : fast itcider (en version)
-version : V5.3
+version : V5.4
 author : itcider.com
 website : itcider.com
 license : itcider license
