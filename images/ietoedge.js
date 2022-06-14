@@ -12,14 +12,6 @@ Redistribution or unauthorized use of code is strictly prohibited
 Distributable only on the itcider official website
 If you do not follow the above precautions, you will not be able to use it.
 */
-if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-
-  window.location = 'microsoft-edge:' + window.location;
-
-  setTimeout(function() {
-
-    window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
-
-  }, 1);
-
+if (window.navigator.userAgent.match(/MSIE|Internet Explorer|Trident/i)) {
+	window.location = "microsoft-edge:" + window.location.href;
 }
